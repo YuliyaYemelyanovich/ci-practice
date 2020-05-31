@@ -1,0 +1,10 @@
+/bin/
+
+# coverage reports
+coverage.html
+coverage.out
+coverage.txt
+
+# Vim temporary files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]

@@ -1,0 +1,26 @@
+language: go
+
+go:
+  - "1.10"
+  - 1.11.x
+  - 1.12.x
+
+os:
+  - linux
+  - osx
+
+stages:
+  - build
+  - test
+
+jobs:
+  exclude:
+    - go: "1.10"
+      os: osx
+  include:
+    - stage: build
+      script: make build
+    - stage: test
+      script: make test
+    - stage: coverage
+      script: make test coverage
